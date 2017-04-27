@@ -22,14 +22,13 @@ public class FirstActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-        lv = (ListView) this.findViewById(R.id.lvModule);
-        al = new ArrayList<String>();
-        lv.setAdapter(aa);
+        lv = (ListView) this.findViewById(R.id.lvYear);
+        al = new ArrayList<>();
         al.add("Year 1");
         al.add("Year 2");
         al.add("Year 3");
-        aa.notifyDataSetChanged();
-
+        aa = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, al);
+        lv.setAdapter(aa);
 
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
